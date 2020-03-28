@@ -3,3 +3,7 @@
 *.out
 *.toc
 *.swp
+*.kate-swp
+*.bbl
+*.blg
+*.synctex.gz
