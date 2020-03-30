@@ -263,9 +263,7 @@ Kada budete predavali seminarski rad, imenujete datoteke tako da sadrže redni b
 \section{Мета-генетичко програмирање}
 
 Мета-генетичко програмирање подразумева упоредно еволуирање програма који врши генетичко програмирање, које замењује ручно подешавање параметара и одлика алгоритма.
-\linebreak
-
-\textbf{citat There is no reason to believe that having only one level of adaption in an evolutionary computation is optimal}.
+\newline
 
 Постоје различити начини да се примени мета-генетичко програмирање. Према подели датој у \textbf{citat!} то су:
 
@@ -277,7 +275,7 @@ Kada budete predavali seminarski rad, imenujete datoteke tako da sadrže redni b
 \end{itemize}
 
 У даљем тексту ће пажња бити посвећена последњем начину.
-\linebreak
+\newline
 
 Треба узети у обзир да мета-генетички алгоритми изискују знатно више рачунарских ресурса, јер сада свака јединка на првом мета-нивоу сада захтева извршавање алгоритма генетичког програмирања, ради израчунавања њене прилагођености, и сходно томе, треба проценити да ли је додатно улагање ресурса вредно могућих добитака.
 
@@ -289,7 +287,7 @@ Kada budete predavali seminarski rad, imenujete datoteke tako da sadrže redni b
 Међутим, одабир оператора није тривијалан, јер је могуће да неки јако добар оператор не буде ни лак за тумачење, ни интуитиван, односно, мало је вероватно да би нека особа сама осмислила такав оператор, што сасвим одговара мотивацији генетичких алгоритама уопште, где је простор претраге јако велик, и посао проналажења решења је препуштен рачунару, а не особи.
 \newline
 
-Као и у типичном генетичком програмирању, јединке се приказују помоћу синтаксних стабала, с тим што оваква стабла садрже инструкције које представљају операторе мутације. У овом случају, прилагођеност је сразмерна прилагођености јединки које јединка мета-генетичког програмирања може да генерише својим извршавањем. Више о томе шта би функција прилагођености могла да укључује дато је у \textbf{referisanom odeljku u daljem tekstu}.
+Као и у типичном генетичком програмирању, јединке се приказују помоћу синтаксних стабала, с тим што оваква стабла садрже инструкције које представљају операторе мутације. У овом случају, прилагођеност је сразмерна прилагођености јединки које јединка мета-генетичког програмирања може да генерише својим извршавањем. Више о томе шта би функција прилагођености могла да укључује дато је у \ref{mgp_poboljsanja}.
 \newline
 
 \subsubsection{Елементи оператора}
@@ -301,7 +299,7 @@ Kada budete predavali seminarski rad, imenujete datoteke tako da sadrže redni b
 \item \texttt{bott2} — вратити друго стабло, са изабраним кореним чвором
 \end{itemize}
 
-И следећи унутрашњи чворовиw
+И следећи унутрашњи чворови:
 
 \begin{itemize}
 \item \texttt{top} — одсећи део стабла тако да изабрани чвор сада постане нови корен
@@ -312,14 +310,36 @@ Kada budete predavali seminarski rad, imenujete datoteke tako da sadrže redni b
 \item \texttt{subs} — вратити дрво које је први аргумент, тако да је његов изабрани чвор замењен дрветом које је други аргумент.
 \end{itemize}
 
-На пример, оператор који има ову структуру:
+На пример, оператор који има структуру задату сликом \ref{fig:mgp_primer} се може тумачити као "прво дете корена првог стабла замени са другим стаблом''.
 
-\textbf{SLIKA}
+\begin{figure}[h!]
+    \begin{center}
+    \includegraphics[scale=0.15]{mgp_primer.png}
+    \end{center}
+    \caption{Пример једног оператора}
+    \label{fig:mgp_primer}
+\end{figure}
 
+\textbf{ovde mogu da napravim ceo primer kako bi izgledalo spajanje jedinki, ako ne budem ništa drugo imao da dopunim do tri strane..}
 
+\subsubsection{Разматрања за могућа побољшања алгоритма}
+\label{mgp_poboljsanja}
+Према истраживању датом у \textbf{referenca}, долази се до закључка да се, због похлепног приступа алгоритма, јако брзо конвергира ка пар ефективних оператора, што умањује разноврсност популације и тиме онемогућује да се дође до неких оператора који постају ефективни тек када се развију. Због тога, функцију прилагођености треба конструисати тако да она узима у обзир колико јединка утиче на разноврсност популације, да ли производи повремене значајне напретке, или равномерне благе напретке и слично.
+\newline
 
+Примећује се да ограничавање висине стабла оператора негативно утиче на учинак.
 
+\subsection{Поређење са генетичким програмирањем}
 
+Када се упореди са алгоритмом генетичког програмирања, увиђа се да резултати некада могу бити знатно бољи, а некада конвергирају ка истој вредности (овом пасусу је потребна промена).
+
+\begin{figure}[h!]
+    \begin{center}
+    \includegraphics[scale=0.15]{mgp_poredjenje.png}
+    \end{center}
+    \caption{Поређење ГП и МГП}
+    \label{fig:mgp_poredjenje}
+\end{figure}
 % UPUTSTVA
 % Vaš seminarski rad mora da sadrži najmanje jednu \textbf{sliku}, najmanje jednu \textbf{tabelu} i najmanje \textbf{sedam referenci} u spisku literature. Najmanje jedna slika treba da bude originalna i da predstavlja neke podatke koje ste Vi osmislili da treba da prezentujete u svom radu. Isto važi i za najmanje jednu tabelu. 	Od referenci, neophodno je imati bar jednu \textbf{knjigu}, bar jedan \textbf{naučni članak} iz odgovarajućeg časopisa i bar jednu adekvatnu \textbf{veb adresu}. 
 % \textbf{Dužina seminarskog rada treba da bude od 10 do 12 strana.} Svako prekoračenje ili potkoračenje biće kažnjeno sa odgovarajućim brojem poena. Eventualno, nakon strane 12, može se javiti samo tekst poglavlja \textbf{Dodatak} koji sadrži nekakav dodatni k\^{o}d, ali je svakako potrebno da rad može da se pročita i razume i bez čitanja tog dodatka. 
