@@ -198,21 +198,23 @@
 Примитивни скуп треба да буде дефинисан тако да је могуће изразити решење коришћењем садржаних примитива. Нажалост, врло често није могуће предвидети примитивни скуп тако да задовољава ово својство. Ипак, захваљујући природи генетског програмирања, врло често иако решење не може да се представи, алгоритам може развити програме који представљају његову апроксимацију. То је најчешће и сасвим довољно. Примери функција дати су у табели \ref{tab:primitive}. \newline
     
 \begin{table}[h!]
-    \begin{center}
+    \centering
     \caption{Пример функција генетичког програмирања.}
     \medskip
-        \begin{tabular}{|c|c|} 
-        \hline 
-        природа функције & примери\\[0.3em] \hline 
-        аритметичка & +, -, $\times$, $\div$\\[0.3em]
-        математичка & sin, cos, exp\\[0.3em]
-        логичка & $\land$, $\lor$, $\not$\\[0.3em] 
-        условни изрази & if-else\\[0.3em] 
-        петље & for, while\\[0.3em] 
-        \hline
+    
+        \begin{tabular}{>{\centering\arraybackslash}m{1.2in} >{\centering\arraybackslash}m{0.8in}} 
+        
+        \toprule
+        природа функције & примери\\
+        \midrule
+        аритметичка & +, -, $\times$, $\div$\\
+        математичка & sin, cos, exp\\
+        логичка & $\land$, $\lor$, $\not$\\
+        условни изрази & if-else\\
+        петље & for, while\\
+        \bottomrule
         \end{tabular}
     \label{tab:primitive}
-    \end{center}
 \end{table}
     
 \textbf{2. Како изгледа функција прилагођености?}\newline
@@ -232,7 +234,8 @@
 \begin{table}[h!]
     \centering
       \caption{Карактеристике путања}
-
+      \medskip
+      
     \begin{tabular}{ >{\centering\arraybackslash}m{1.5in} >{\centering\arraybackslash}m{0.6in} >{\centering\arraybackslash}m{0.6in} >{\centering\arraybackslash}m{0.6in}}
     
     \toprule
