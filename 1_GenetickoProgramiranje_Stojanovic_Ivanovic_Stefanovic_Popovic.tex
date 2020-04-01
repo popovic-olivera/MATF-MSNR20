@@ -8,7 +8,6 @@
 \usepackage{graphicx}
 \usepackage{array, booktabs}
 
-%\usepackage[english,serbian]{babel}
 \usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
 
 \usepackage[unicode]{hyperref}
@@ -18,7 +17,6 @@
 \usepackage{amsmath}
 
 \newtheorem{primer}{Пример}[section] %ćirilični primer
-% \newtheorem{primer}{Primer}[section]
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -64,7 +62,7 @@
 
 \author{Александра Стојановић, Ивана Ивановић,\\ Александар Стефановић, Оливера Поповић\\ mi16048@alas.matf.bg.ac.rs, mi16120@alas.matf.bg.ac.rs,\\ ai16222@alas.matf.bg.ac.rs, mi16064@alas.matf.bg.ac.rs}
 
-%\date{9.~april 2015.}
+\date{1.~april 2020.}
 
 \maketitle
 
@@ -107,7 +105,7 @@
 
 У генетичком програмирању популацију чине рачунарски програми. Еволуцијом се од почетних, најчешће на случајан начин генерисаних програма, добијају нови, у нади бољи и ефикаснији програми. Како је то случајан процес, резултат никада не може бити гарантован. Ипак, управо та случајност даје могућност превазилажења неких проблема које имају други детерминистички алгоритми \cite{fieldGuidetoGP}. На слици \ref{fig:kontrola_toka} приказан је дијаграм контроле тока опште верзије алгоритма. У наставку биће детаљно описан сваки од наведених корака алгоритма.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \begin{center}
         \includegraphics[scale=0.22]{opsti_algoritam.png}
     \end{center}
@@ -131,7 +129,7 @@
     \end{equation}
     Одговарајући скуп терминала: \{2, $\pi$, 5, x, y, 4\}, скуп функција:\newline \{+, -, *, /\}, док је одговарајуће синтаксно стабло дато на слици \ref{fig:sintaksno_stablo}.
 
-    \begin{figure}[h!]
+    \begin{figure}[ht!]
         \begin{center}
         \includegraphics[scale=0.22]{sintaksno_stablo.png}
         \end{center}
@@ -198,7 +196,7 @@
 \textbf{1. Како изгледа примитивни скуп?}\newline
 Примитивни скуп треба да буде дефинисан тако да је могуће изразити решење коришћењем садржаних примитива. Нажалост, врло често није могуће предвидети примитивни скуп тако да задовољава ово својство. Ипак, захваљујући природи генетског програмирања, врло често иако решење не може да се представи, алгоритам може развити програме који представљају његову апроксимацију. То је најчешће и сасвим довољно. Примери функција дати су у табели \ref{tab:primitive}. \newline
     
-\begin{table}[h!]
+\begin{table}[ht!]
     \centering
     \caption{Пример функција генетичког програмирања.}
     \medskip
@@ -232,7 +230,7 @@
 \subsection{Роботика}
 Једна од симулација јесте позната игра јурке коју играју два робота јурећи се својим возилима. Оба играча поседују информацију о томе ко јури и где му се апроксимативно налази противник. Циљ игре је што краће бити онај који треба да јури противника. Игра се у четири рунде од којих се свака састоји од 25 симулација. Улоге се, у току једне рунде, мењају кад онај који јури буде од свог противника на растојању од једног возила. Резултат играча за ту рунду рачуна се као број колико пута није био онај који јури подељен са 25 \cite{tag}.
 
-\begin{table}[h!]
+\begin{table}[ht!]
     \centering
       \caption{Карактеристике путања}
       \medskip
@@ -257,7 +255,7 @@
 
 За прву путању успешно је решен проблем у 21. генерацији, док је за другу путању било потребно стићи до 19. генерације \cite{koza}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \begin{center}
         \includegraphics[scale=0.35]{santa_fe.png}
     \end{center}
@@ -320,46 +318,13 @@
 
 На пример, оператор који има структуру задату сликом \ref{fig:mgp_primer} се може тумачити као ,,прво дете корена првог стабла замени са другим стаблом и вратити тако добијено стабло''.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \begin{center}
     \includegraphics[scale=0.12]{mgp_primer.png}
     \end{center}
     \caption{Пример једног оператора}
     \label{fig:mgp_primer}
 \end{figure}
-
-% UPUTSTVA
-% Vaš seminarski rad mora da sadrži najmanje jednu \textbf{sliku}, najmanje jednu \textbf{tabelu} i najmanje \textbf{sedam referenci} u spisku literature. Najmanje jedna slika treba da bude originalna i da predstavlja neke podatke koje ste Vi osmislili da treba da prezentujete u svom radu. Isto važi i za najmanje jednu tabelu. 	Od referenci, neophodno je imati bar jednu \textbf{knjigu}, bar jedan \textbf{naučni članak} iz odgovarajućeg časopisa i bar jednu adekvatnu \textbf{veb adresu}. 
-% \textbf{Dužina seminarskog rada treba da bude od 10 do 12 strana.} Svako prekoračenje ili potkoračenje biće kažnjeno sa odgovarajućim brojem poena. Eventualno, nakon strane 12, može se javiti samo tekst poglavlja \textbf{Dodatak} koji sadrži nekakav dodatni k\^{o}d, ali je svakako potrebno da rad može da se pročita i razume i bez čitanja tog dodatka. 
-
-% TABELA
-% \begin{table}[h!]
-% \begin{center}
-% \caption{Razlčita poravnanja u okviru iste tabele ne treba koristiti jer su nepregledna.}
-% \begin{tabular}{|c|l|r|} \hline
-% centralno poravnanje& levo poravnanje& desno poravnanje\\ \hline
-% a &b&c\\ \hline
-% d &e&f\\ \hline
-% \end{tabular}
-% \label{tab:tabela1}
-% \end{center}
-% \end{table}
-
-% KOD
-% Za ubacivanje koda koristite paket \textbf{listings}:
-% \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}
-% 
-% 
-% \begin{lstlisting}[caption={Primer ubacivanja koda u tekst},frame=single, label=simple]
-% # This program adds up integers in the command line
-% import sys
-% try:
-%     total = sum(int(arg) for arg in sys.argv[1:])
-%     print 'sum =', total
-% except ValueError:
-%     print 'Please supply integer arguments'
-% \end{lstlisting}
-
 
 \section{Закључак}
 
@@ -387,7 +352,7 @@
 \end{equation}
 при чему је $*_x$ нека вредност из скупа функција \{+, -, *\}, док променљиве a, b, c, d, e, f, g и h имају вредност између 1 и 10. Синтаксно стабло које одговара овој формули приказано је на слици \ref{fig:stablo}. \newline
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \begin{center}
     \includegraphics[scale=0.14]{stablo_primera.png}
     \end{center}
@@ -397,7 +362,7 @@
 
 Први корак је одлука која ће репрезентација бити коришћена. Како су све функције из скупа исте арности (арности 2), могуће је синтаксно стабло представити на ефикаснији начин, низом елемената. Низ се попуњава редом,  обиласком стабла слева на десно. Захваљујући информацији да су све функције исте арности, могуће је јединствено одредити на ком се месту у низу се налази родитељ, а на ком његова деца из одговарајућег синтаксног стабла. Ако се родитељ налази на месту x у низу, његова деца налазиће се на местима x+1 и x+2 (нумерисање чворова почиње од 0). Низ који одговара стаблу са слике \ref{fig:stablo} приказан је на слици \ref{fig:niz}. \newline
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \begin{center}
     \includegraphics[scale=0.14]{niz_primera.png}
     \end{center}
@@ -459,7 +424,7 @@ def inicijalizacija(velicina_populacije):
 Након иницијализације почетне популације, потребно је дефинисати како се из популације бирају јединке које ће учествовати у репродукцији. У примеру коришћена је турнирска селекција, са величином турнира једнаком 5. Турнир се спроводи два пута, са различитим јединкама, како би била одабрана два родитеља. Одговарајући код приказан је у наставку.
 
 \bigskip
-\begin{lstlisting}[frame=single, label=simple]
+\begin{lstlisting}[frame=single]
 def turnirska_selekcija(populacija):
     maksimum = float('-inf')
     najbolja_jedinka = -1
@@ -479,7 +444,7 @@ def turnirska_selekcija(populacija):
 Када су јединке селектоване, следи репродукција. Она ће бити реализована као једноставно укрштање родитеља. На случајан начин се одабере тачка укрштања родитеља, након чега се размене подстабла са кореном у чвору тачке. На тај начин добијају се два детета. Слика која илуструје тај процес дата је на слици \ref{fig:ukrstanje}. На слици су приказани само делови стабала ради лакше илустрације. Одговарајући код следи у наставку.
 
 \bigskip
-\begin{lstlisting}[frame=single, label=simple]
+\begin{lstlisting}[frame=single]
 def ukrstanje(roditelj1, roditelj2, dete1, dete2):
     velicina_stabla = len(roditelj1.stablo)
     
@@ -513,7 +478,7 @@ def nadji_podstablo(koren, velicina_stabla, podstablo):
     nadji_podstablo(2*koren+2, velicina_stabla, podstablo)
 \end{lstlisting}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \begin{center}
     \includegraphics[scale=0.16]{ukrstanje.png}
     \end{center}
@@ -525,7 +490,7 @@ def nadji_podstablo(koren, velicina_stabla, podstablo):
 Уколико је чвор из скупа функција, бира се опет, на случајан начин, функција из истог скупа. У супротном поново бира се вредност између 1 и 10. Одговарајући код дат је у наставку.
 
 \bigskip
-\begin{lstlisting}[frame=single, label=simple]
+\begin{lstlisting}[frame=single]
 def mutacija(jedinka):
     for i in range(len(jedinka.stablo)):
         if random.random() > 0.1:
@@ -535,12 +500,12 @@ def mutacija(jedinka):
         else random.randrange(1, 11)
 \end{lstlisting}
 
-Пре извршавања комплетног алгоритма, потребно је дефинисати параметре за контролу његову контролу. Величина популације постављена је на вредност 500, што је њена препоручена минимална вредност. За број генерација узета је вредност од 50, опет поштујући препоруку да ова вредност не треба да буде велики број. При замени популација у смени генерација спроведен је и \textbf{елитизам}. Наиме, када се прави нова популација може се одабрати одређени број прилагођенијих јединки који ће бити директно пребачен у следећу генерацију. Мотивација иза тога је да се сачувају боље карактеристике, које би у процесу репродукције можда бити изгубљене. У примеру је одабрано да тај број буде једнак 100. \newline
+Пре извршавања комплетног алгоритма, потребно је дефинисати параметре за његову контролу. Величина популације постављена је на вредност 500, што је њена препоручена минимална вредност. За број генерација узета је вредност од 50, опет поштујући препоруку да ова вредност не треба да буде велики број. При замени популација у смени генерација спроведен је и \textbf{елитизам}. Наиме, када се прави нова популација може се одабрати одређени број прилагођенијих јединки који ће бити директно пребачен у следећу генерацију. Мотивација иза тога је да се сачувају боље карактеристике, које би у процесу репродукције можда бити изгубљене. У примеру је одабрано да тај број буде једнак 100. \newline
 
 Као резултат извршавања добија се вредност од 100000000. Услед једноставности примера овај резултат је и био очекиван, јер се највећа вредност добија када се за све $*_x$ узме операција множења, а за све променљиве вредност 10. Као следећи корак могао би бити додат некакав предикат успеха. На пример, уколико се вредност не промени одређени број пута вероватно је да је алгоритам дошао до траженог максимума, те претрага може бити прекинута раније. Код извршавања комплетног алгоритма дат је у наставку.
 
 \bigskip
-\begin{lstlisting}[frame=single, label=simple]
+\begin{lstlisting}[frame=single]
 velicina_populacije = 500
 populacija = inicijalizacija(velicina_populacije)
 
