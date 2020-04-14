@@ -1,0 +1,225 @@
+
+
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Genetičko programiranje\\ \small{Aleksandra Stojanović, Ivana Ivanović, Aleksandar Stefanović, Olivera Popović}}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Recenzent \odgovor{--- ocena: 5} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+U radu je opisana metoda koja za cilj ima automatsko pravljenje programa koji će rešiti određeni problem. Algoritam je zasnovan na evolutivnim konceptima nasleđenim iz biologije. S obzirom da u opštem slučaju ne koristi specifičnosti problema, malim prilagođavanjima može biti primenjen na širok skup problema.  Pogodno izabrani parametri i operatori ukrštanja/mutacije dovode do dobrih rezultata. 
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+U sekciji \textit{Selekcija}, možda je dobro napomenuti da se u turnirskoj selekciji jedinke upoređuju prema vrednosti njihovih funkcija prilagođenosti, i da se u tom smislu uzima najbolja.\\  
+\odgovor{Sugestija je prihvaćena.}
+
+U sekciji \textit{Primeri primene}, konkretno u drugom problemu u podsekciji Robotika, ni na koji način nije opisano šta bi bila funkcija prilagođenosti ili reprezentacija jednike, te ostaje nejasno na koji način je ovde primenjeno genetičko programiranje. Takođe za primene u ekonomiji, za razliku od ostalih primena, ovde ne može tek tako da se pretpostavi, bez čitanja referentne literature, kako bi algoritam mogao biti primenjen. Jednostavnije bi bilo navesti po jedan primer primene za svaku od navedenih grana, ali nagovestiti kako je genetičko programiranje prilagođeno na navedeni problem.\\
+\odgovor{Izmenjen deo u \textit{Robotici} u skladu sa sugestijom. Što se tiče sekcije \textit{Ekonomija}, zbog nedostatka prostora za proširenje rada dodato je samo da je za jedan problem korišćena klasifikacija.}
+
+Određeni delovi i objašnjena iz dodatka su već opisani kao delovi sekcije \textit{Opšti algoritam}, pa bi se na njih moglo samo referisati čime bi dodatak bio znatno kraći. Koraci opšteg algoritma bi bili jasniji kada bi bili prikazani na direktnom primeru kao što je Slika 7 iz dodatka, pa bi je možda trebalo tamo i prebaciti.\\
+\odgovor{Dodata je referenca na delove koji su već spomenuti. Sugestija oko slike ima smisla, međutim nije je moguće dodati, a da se pritom ne premaši limit od 12 strana.}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Što se tiče štamparskih ili stilskih greški, rad je vrlo precizno napisan, odnosno rečenice su kratke i jasno opisuju poentu bez preteranog odstupanja od teme.
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da. Opisana je motivacija za algoritam, opšti postupak i primene.
+\item Da li je nešto važno propušteno?\\
+Ne.
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne. Navedene su primedbe na ponavljanje teksta.
+\item Da li je naslov rada dobro izabran?\\
+Da. Naslov odgovara temi koja je obrađivana u radu.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da. Ukratko je opisana struktura rada i koje će teme biti obrađivane.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je lak za čitanje, uz malu primedbu na dužinu dodatka navedenu u sekciji sa primedbama.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Određene podsekcije koje se odnose na primenu bi mogle da budu bolje objašnjena kako bi bilo jasno kako je algoritam primenjen na nihovo rešavanje.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da.
+\item Da li su u radu reference korektno navedene?\\
+Da.
+\item Da li je struktura rada adekvatna?\\
+Da. Opisan je istorijat nastanka, opšta procedura i primene.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Da.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+S obzirom da je tema bila obrađivana kao nastavna jedinica na kursevima \textit{Računarska inteligencija} i \textit{Veštačka inteligencija}, rekao bih da sam veoma upućen u oblast.
+
+\chapter{Recenzent \odgovor{--- ocena: 5} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+Rad govori o načinu na koji računar uz pomoć genetičkog programiranja dolazi do rešenja problema koji je apstraktno opisan. Dat je istorijski razvoj genetičkog programiranja, detaljan opis koraka algoritma, način prilagođavanja algoritma različitim problemima, kao i primeri primena genetičkog programiranja. Posebno je opisano meta-genetičko programiranje, a u dodatku je primer primene genetičkog programiranja na konkretnom problemu.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+
+\begin{itemize}
+	\item Poslednja rečenica uvoda i prva rečenica istorijata su poprilično iste, mislim da bi se ova rečenica mogla izbaciti iz uvoda.
+	\item Drugi pasus u okviru istorijata je poprilično konfuzan i nejasan, konkretno nije jasno koji koraci su doveli do zaključka da nije moguće evoluirati računarski kod.
+\end{itemize}
+\odgovor{Obe sugestije prihvaćene.}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+
+\begin{itemize}
+	\item U okviru dodatka(primera), u pasusu ispod slike 5, kada je reč o poziciji dece u odnosu na roditelje piše da je poziija dece x+1 i x+2, a trebalo bi 2*x+1 i 2*x+2. Smatram da je ovo slučajna greška jer je u kodu ispravno napisano.
+\end{itemize}
+\odgovor{Ispravljena greška.}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da, rad u potpunosi odgovara na zadatu temu.
+\item Da li je nešto važno propušteno?\\
+Sve važne teme su obrađene.
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne, ništa suštinski nije propušteno.
+\item Da li je naslov rada dobro izabran?\\
+Da, naslov je upravo tema kojom se rad bavi.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da, u sažetku su navedene sve oblasti koje će biti opisane, kao i krtak opis problema koji može da zainteresuje čitaoca.
+\item Da li je rad lak-težak za čitanje?\\
+Sve forme su ispoštovane, stil pisanja je sličan kao i u literaturi, tako da je rad lak za čitanje.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Potrebno je predznanje, ali ne u velikoj meri. Pre svega se odnosi na poznavanje Python programskog jezika, a onda i na pojedine termine, ali njihovo značenje se može zaključiti iz konteksta.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Navedena je odgovarajuća literatura.
+\item Da li su u radu reference korektno navedene?\\
+Reference su korektno navedene.
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je adekvatna, šablon je u potpunosti ispoštovan.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da, rad sadrži sve neophodne elemente.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Da, i slike i tabele se mogu tumačiti nezavisno od teksta.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+U ovu oblast sam srednje upućen, slušao sam kurseve Veštačka inteligencija i Računarska inteligencija na Matematičkom fakultetu, gde je obradjena tema genetičko programiranje.
+
+
+\chapter{Recenzent \odgovor{--- ocena: 4} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+U radu je prikazana potreba za uvođenjem genetičkog programiranja, način na koji sam algoritam funkcioniše kroz opis osnovnih gradivnih elemenata samog algoritma. Način na koji se može upotrebiti u različitim oblastima.
+Takođe u dodatku je dat detaljan opis koraka pri rešavanju problema maksimizacije zadate formule korišćenjem genetičkog programiranja. 
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+Mislim da bi bilo bolje u razradu teme staviti bar jedan konkretan primer umesto u dodatak i da je deo istorijata manje bitan od bar jednog konkretnog primera u radu, čime bi rad bio sveobuhvatan bez dodatka.\\
+\odgovor{Rado bismo izmenili u skladu sa ovom primedbom, ali to bi značilo potpuno drugačiji tip rada od ovog kako smo ga mi zamislili. Fokus je više bio na teorijskom delu, na šta su dodate neke od primena kako bi se objasnio značaj genetičkog programiranja. Izmenjen je jedan od primera u robotici kako bismo upotpunili sliku.}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Referenciranje na sliku 1(koja je u drugom poglavlju) u istorijatu jer je pri čitanju zbunjujuca gde se nalazi ta slika, a na nju će svakako biti opet referisano tamo gde je potrebno\\
+\odgovor{Uvažena je sugestija.}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad u potpunosti odgovara na temu. Motivacija genetičkog programiranja , algoritam, primena i primer. 
+\item Da li je nešto važno propušteno?\\
+Nema važnih propusta.
+\item Da li ima suštinskih grešaka i propusta?\\
+Nema suštinskih grešaka
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada je isti kao naziv dobijene teme, pa po naslovu verovatno ne bi bio odabran od strane nekoga ko vec ima znanja o toj temi.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak sadrži sve potrebne elemente, motivaciju i ciljeve vezane za temu koji se obrađuju u radu.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je korektan za čitanje.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Nije potrebno predznanje o samoj temi. Moze se rad koristiti pri upoznavanju sa idejom genetičkog programiranja.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da, u radu je navedena odgovarajuća literatura i na odgovarajući način.
+\item Da li su u radu reference korektno navedene?\\
+Reference su korektno navedene.
+\item Da li je struktura rada adekvatna?\\
+Rad sadrži sve potrebne elemente. Apstrakt, uvod, tematski razradu lepo podeljenu na celine i zaključak
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Sadrži slike, tabele, tačan broj strana 12(ne računajući dodatak) adekvatnu literaturu i zadovoljava minimalni broj korišćene literature.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Slike i tabele su opisane na pravi način(tačno ono što predstavljaju).
+I lake za tumačenje.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+U oblast sam upućena dobro zbog fakultetskih predmeta koji ih sadrže i ličnog interesovanja.
+
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+Izmenjeni su komentari kodova u sklopu Dodatka.
+
+\end{document}
