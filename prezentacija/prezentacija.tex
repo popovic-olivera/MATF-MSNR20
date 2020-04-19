@@ -1,3 +1,4 @@
+\PassOptionsToPackage{unicode,bookmarks=true}{hyperref}
 \documentclass{beamer}
 %
 % Choose how your presentation looks.
@@ -7,21 +8,38 @@
 %
 \mode<presentation>
 {
-  \usetheme{Frankfurt}      % or try Darmstadt, Madrid, Warsaw, ...
-  \usecolortheme{seahorse} % or try albatross, beaver, crane, ...
+  \usetheme{Copenhagen}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{seagull} % or try albatross, beaver, crane, ...
   \usefonttheme{default}  % or try serif, structurebold, ...
   \setbeamertemplate{navigation symbols}{}
   \setbeamertemplate{caption}[numbered]
 } 
 
+\usepackage{etoolbox}
+\makeatletter
+\newcommand{\dontusepackage}[2][]{%
+  \csdef{ver@#2.sty}{9999/12/31}%
+  \csdef{opt@#2.sty}{#1}}
+\newcommand{\pretendpackagewasnotloaded}[1]{%
+  \csundef{ver@#1.sty}%
+  \csundef{opt@#1.sty}}
+\makeatother
+
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
-\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
+\dontusepackage{ucs}
+\usepackage[english,serbianc]{babel}
+\pretendpackagewasnotloaded{ucs}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{literatura.bib}
 
 \title[Генетичко програмирање]{Генетичко програмирање}
-\author{Александра Стојановић, Ивана Ивановић,\\ Александар Стефановић, Оливера Поповић}
-\institute{Математички факултет}
-\date{Date of Presentation}
+\author[Стојановић, Ивановић, Стефановић, Поповић]{Александра Стојановић, Ивана Ивановић, Александар Стефановић, Оливера Поповић}
+\institute[МАТФ]{Математички факултет\\Универзитет у Београду}
+\date{21. април 2020.}
+
+\graphicspath{ {./Images/} }
+\setcounter{tocdepth}{1}
 
 \begin{document}
 
@@ -36,73 +54,88 @@
 
 \section{Историјат}
 
-	\begin{frame}{Историјат}
-		\begin{itemize}
-			\item 1948 — Алан Тјуринг
-			\item 1962 — Џон Холанд
-			\item Представљање бројева низовима битова фиксне дужине у проблемима оптимизације
-			\item Холанд и Раитман — Систем класификатора
-			\item Смит — Репрезентација променљиве дужине
-			\item 1981 — Форсит — Репрезентација помоћу стабала
-			\item 1985 — Крамер
-		\end{itemize}
-	\end{frame}
+    \begin{frame}{Историјат}
+        \begin{itemize}
+            \item 1948 — Алан Тјуринг
+            \item 1962 — Џон Холанд
+            \item Представљање бројева низовима битова фиксне дужине у проблемима оптимизације
+            \item Холанд и Раитман — Систем класификатора
+            \item Смит — Репрезентација променљиве дужине
+            \item 1981 — Форсит — Репрезентација помоћу стабала
+            \item 1985 — Крамер
+        \end{itemize}
+    \end{frame}
 
-	\begin{frame}{Историјат}
-		\begin{itemize}
-			\item Џон Коза
-			\begin{itemize}
-				\item 1989 — документовање методе која је користила универзални језик
+    \begin{frame}{Историјат}
+        \begin{itemize}
+            \item Џон Коза
+            \begin{itemize}
+                \item 1989 — документовање методе која је користила универзални језик
                 \item 1992 — објављивање књиге
                 \item 1996 — годишња конференција о ГП-у
                 \item 1998 — први уџбеник ГП-а
-			\end{itemize}
-			\item Рик Риоло — наставак процвата ГП-а
-			\item 2003 — годишња радионица
-		\end{itemize}
-	\end{frame}
+            \end{itemize}
+            \item Рик Риоло — наставак процвата ГП-а
+            \item 2003 — годишња радионица
+        \end{itemize}
+    \end{frame}
 
 \section{Опис алгоритма}
 
-	\begin{frame}{Опис алгоритма}
-		\begin{itemize}
-			\item Инспирисан процесом еволуције у природи
-     		\item Спада у групу алгоритама \textbf{еволутивног израчунавања}	
-     		\item Процес природне селекције
-     		\item Комбиновање г
-		\end{itemize}
-	\end{frame}
+    \begin{frame}{Опис алгоритма}
+        \begin{itemize}
+            \item Инспирисан процесом еволуције у природи
+            \item Спада у групу алгоритама \textbf{еволутивног  израчунавања}	
+            \item Процес природне селекције
+            \item Комбиновање гена
+        \end{itemize}
+        \begin{center}
+            \includegraphics[scale=0.14]{opsti_algoritam.png}
+        \end{center}
+    \end{frame}
+    
+    \subsection[Репрезентација јединки]{Репрезентација јединки}
 
-	\begin{frame}{Опис алгоритма}
-	\end{frame}
+    \begin{frame}{Опис алгоритма}
+    \end{frame}
+    
+    \subsection[Иницијализација популације]{Иницијализација популације}
 
-	\begin{frame}{Опис алгоритма}
-	\end{frame}
+    \begin{frame}{Опис алгоритма}
+    \end{frame}
 
-	\begin{frame}{Опис алгоритма}
-	\end{frame}
-	
-	\begin{frame}{Опис алгоритма}
-	\end{frame}
-	
+    \begin{frame}{Опис алгоритма}
+    \end{frame}
+    
+    \begin{frame}{Опис алгоритма}
+    \end{frame}
+
 \section{Примери примене и мета-генетичко програмирање}
 
-	\begin{frame}{Примери примене и мета-генетичко програмирање}
-	\end{frame}
+    \begin{frame}{Примери примене и мета-генетичко програмирање}
+    \end{frame}
 
-	\begin{frame}{Примери примене и мета-генетичко програмирање}
-	\end{frame}
-	
-	\begin{frame}{Примери примене и мета-генетичко програмирање}
-	\end{frame}
-	
-	\begin{frame}{Примери примене и мета-генетичко програмирање}
-	\end{frame}
-	
+    \begin{frame}{Примери примене и мета-генетичко програмирање}
+    \end{frame}
+
+    \begin{frame}{Примери примене и мета-генетичко програмирање}
+    \end{frame}
+    
+    \begin{frame}{Примери примене и мета-генетичко програмирање}
+    \end{frame}
+    
 \section{Литература}
-
-	\begin{frame}{Литература}
-	\end{frame}
+    \nocite{*}
+    \begin{frame}{Литература}
+        \printbibliography
+    \end{frame}
+    
+\section{}
+\begin{frame}{}
+    \centering
+        \Huge\bfseries{Хвала на пажњи!\\ Питања?}
+\end{frame}
+\end{document}
 
 
 
@@ -182,5 +215,3 @@ denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{
 
 \end{frame}
 \fi
-
-\end{document}
