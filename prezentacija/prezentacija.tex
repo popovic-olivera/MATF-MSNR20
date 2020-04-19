@@ -13,6 +13,7 @@
   \usefonttheme{default}  % or try serif, structurebold, ...
   \setbeamertemplate{navigation symbols}{}
   \setbeamertemplate{caption}[numbered]
+  \setbeamertemplate{bibliography item}{}
 } 
 
 \usepackage{etoolbox}
@@ -30,7 +31,7 @@
 \dontusepackage{ucs}
 \usepackage[english,serbianc]{babel}
 \pretendpackagewasnotloaded{ucs}
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=bibtex, bibstyle=nature, sorting=nty, citestyle=numeric-comp]{biblatex}
 \addbibresource{literatura.bib}
 
 \title[Генетичко програмирање]{Генетичко програмирање}
