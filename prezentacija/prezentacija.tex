@@ -32,10 +32,8 @@
 \dontusepackage{ucs}
 \usepackage[english,serbianc]{babel}
 \pretendpackagewasnotloaded{ucs}
-\usepackage[backend=bibtex, bibstyle=nature, sorting=nty, citestyle=numeric-comp]{biblatex}
+\usepackage[backend=biber, bibstyle=nature, sorting=nty, citestyle=numeric-comp]{biblatex}
 \addbibresource{literatura.bib}
-
-\newtranslation[to=Serbian]{References}{Литература}
 
 
 \title[Генетичко програмирање]{Генетичко програмирање}
@@ -239,33 +237,33 @@
 
 \subsection[Мета-генетичко програмирање]{Мета-генетичко програмирање}
 
-    \begin{frame}{Мета-генетичко програмирање}
+\begin{frame}{Мета-генетичко програмирање}
+    \begin{itemize}
+        \item Упоредно еволуирање програма који врши генетичко програмирање
+        \item Једна од метода МГП је еволуирање оператора мутације
         \begin{itemize}
-            \item Упоредно еволуирање програма који врши генетичко програмирање
-            \item Једна од метода МГП је еволуирање оператора мутације
-            \begin{itemize}
-                \item Јединке су оператори мутације приказани помоћу синтаксних стабла
-                \item Оператори садрже кораке који мењају гене над којима се врши мутација
+            \item Јединке су оператори мутације приказани помоћу синтаксних стабла
+            \item Оператори садрже кораке који мењају гене над којима се врши мутација
             \end{itemize}
-            \item Прилагођеност јединке се мери кроз прилагођеност јединки које генерише
-            \item Изискују више рачунарских ресурса
-        \end{itemize}
-    \end{frame}
+        \item Прилагођеност јединке се мери кроз прилагођеност јединки које генерише
+        \item Изискују више рачунарских ресурса
+    \end{itemize}
+\end{frame}
     
-    \begin{frame}{Мета-генетичко програмирање}
-		\begin{figure}
-			\includegraphics[scale=0.3]{mgp_primer.png}
-		\end{figure}
+\begin{frame}{Мета-генетичко програмирање}
+    \begin{figure}
+        \includegraphics[scale=0.3]{mgp_primer.png}
+    \end{figure}
+\end{frame}
 
-    \end{frame}
-    
 \appendix
 
-\section{Литература}
-    \begin{frame}{Литература}
-        \nocite{*}
-        \printbibliography
-    \end{frame}
+\renewcommand\refname{Литература}
+
+\begin{frame}{Литература}
+    \nocite{*}
+    \printbibliography
+\end{frame}
 
 
 \section{}
